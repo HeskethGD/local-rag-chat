@@ -1,6 +1,6 @@
 # Offline Local AI Agent Chatbot with RAG
 
-This project builds a chatbot connected to an AI Agent that provides retrieval-augmented generation (RAG), enabling users to ask questions of their docs. The backend is built with Python and uses FastAPI for the API layer. The application is designed to run offline and for the Large Language Model (LLM) it uses Ollama to run small 3B param models such as Llama 3.2 3B.
+This project builds a chatbot connected to an AI Agent that provides retrieval-augmented generation (RAG), enabling users to ask questions of their docs. The backend is built with Python and uses FastAPI for the API layer. The application is designed to run offline and for the Large Language Model (LLM) it uses Ollama to run small 3B param models such as `Llama 3.2 3B`, and uses `nomic-embed-text` for local offline vector embeddings.
 
 The frontend chat UI may eventually be built with Nextjs but for now there is a Python based Streamlit UI in the backend folder.
 
