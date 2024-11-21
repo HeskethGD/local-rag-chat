@@ -1,5 +1,10 @@
 from pydantic import BaseModel
-from typing import List
+from typing import AsyncIterable, Iterable, List, Union
+
+Content = Union[str, bytes]
+SyncContentStream = Iterable[Content]
+AsyncContentStream = AsyncIterable[Content]
+ContentStream = Union[AsyncContentStream, SyncContentStream]
 
 class Message(BaseModel):
     """

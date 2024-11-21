@@ -2,7 +2,8 @@ import streamlit as st
 import requests
 
 BASE_URL = "http://localhost:8000"
-URL_EXT = "/chat"
+# URL_EXT = "/chat"
+URL_EXT = "/rag"
 URL = f"{BASE_URL}{URL_EXT}"
 
 def chat_response(messages):

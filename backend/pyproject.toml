@@ -11,6 +11,13 @@ python = "^3.11"
 requests = "^2.32.3"
 streamlit = "^1.40.1"
 fastapi = "^0.115.5"
+lancedb = "^0.16.0"
+openai = "^1.55.0"
+pymupdf = "^1.24.14"
+ipykernel = "^6.29.5"
+ipywidgets = "^8.1.5"
+python-dotenv = "^1.0.1"
+ollama = "^0.3.3"
 
 
 [tool.poetry.group.dev.dependencies]

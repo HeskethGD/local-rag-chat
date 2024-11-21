@@ -16,19 +16,23 @@ To install Ollama, follow the instructions for your operating sytem here: https:
 ## Using Llama 3.2 3B with Ollama
 
 To view models available on Ollama see here: https://ollama.com/library.
-After installing Ollama, running the following command in a terminal to use the Llama 3.2 3B param model. The first time you run this, it will download the model which is about 2GB and so this may take 10 minutes or so to download.
+This application uses the Llama 3.2 3B param model (about 2GB, approx 10 minutes download) for chat and summaries, and the nomic-embed-text model (274Mb approx 2 minutes download) for vectorisation. To pull them from Ollama run these commands:
 
 ```
-ollama run llama3.2:3b
-```
-
-This will then start the model in a terminal and you can test it by chatting to the model. To exit the chat type:
-
-```
-/bye
+ollama pull llama3.2:3b
+ollama pull nomic-embed-text
 ```
 
 Once you have done this once, you do not need to start Ollama again in a terminal.
+
+## Run the script to embedd the pdfs
+
+Create a folder called `pdfs` in the root of the `backend` folder then run the script to embed the pdfs and load them into the LanceDB vector database:
+
+```
+cd backend
+poetry run python process_pdf_directory.py pdfs/ db_semantic/
+```
 
 ## Run the FastAPI Python backend
 
