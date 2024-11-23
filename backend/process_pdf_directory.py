@@ -10,7 +10,7 @@ import sys
 # openai_api_key = os.getenv("OPENAI_API_KEY")
 
 if len(sys.argv) != 3:
-    print("Usage: poetry run python process_pdf_directory.py pdfs/ app/db_semantic/")
+    print("Usage: poetry run python process_pdf_directory.py pdfs/ db_semantic/")
     sys.exit(1)
 
 load_dotenv()
