@@ -162,4 +162,5 @@ cython_debug/
 #.idea/
 
 pdfs/
+db_semantic/
 .DS_Store
