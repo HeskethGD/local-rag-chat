@@ -35,6 +35,8 @@ def process_pdf_directory(
     
     # Initialize embedding function and semantic DB
     ollama_vecs = OllamaVecs()
+    if not ollama_vecs.dimensions:
+        raise ValueError('Vector dimensions cannot be undefined')
     semantic_db = SemanticDb(
         embedding_function=ollama_vecs.get_embeddings,
         vec_dimension=ollama_vecs.dimensions,
